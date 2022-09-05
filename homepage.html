@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home Page
+        </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1 style="color:white;">Home Page</h1>
+        <table style="width:100%;text-align:center">
+            <tr>
+              <td class="box1">
+                <h3>Experiment 1:</h3>
+                <br>
+                <a style="color:rgb(0, 0, 0);"onclick="listsFunction()"><b>Lists</b></a>
+                <br>
+                <a style="color:rgb(0, 0, 0);"onclick="content2Function()"><b>content2</b></a>
+              </td>
+              <td class="box2" >
+                <div id="content_lists" style="color: black;display:none" ><b>List</b><br>details<br><a style="color:rgb(0, 0, 0);"onclick="listsFunction_more()"><b>more</b></a></div>
+                <div id="content_2" style="color: black;display:none" ><b>content2</b><br>details<br><a style="color:rgb(0, 0, 0);"onclick="content2Function_more()"><b>more</b></a></div>
+              </td>
+              <td class="box3">
+                <div id="lists_more" style="color: black;display:none" ><b>lists</b><br>more details</div>
+                <div id="content2_more" style="color: black;display:none" ><b>content2</b><br>more details</div>
+              </td>
+            </tr>
+          </table>
+        <p class="foot">Footer</p>
+
+
+        <script>
+            function listsFunction() {
+              var x = document.getElementById("content_lists");
+              var y = document.getElementById("content_2");
+              var z = document.getElementById("lists_more");
+              var q = document.getElementById("content2_more");
+              if(y.style.display == "block") {y.style.display = "none";}
+              if(z.style.display == "block") {z.style.display = "none";}
+              if(q.style.display == "block") {q.style.display = "none";}
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } 
+              else 
+              {
+                x.style.display = "none";
+              }
+            }
+            function content2Function() {
+              var x = document.getElementById("content_lists");
+              var y = document.getElementById("content_2");
+              var z = document.getElementById("lists_more");
+              var q = document.getElementById("content2_more");
+              if(x.style.display == "block") {x.style.display = "none";}
+              if(z.style.display == "block") {z.style.display = "none";}
+              if(q.style.display == "block") {q.style.display = "none";}
+                if (y.style.display === "none") {
+                  y.style.display = "block";
+                } 
+                else 
+                {
+                  y.style.display = "none";
+                }
+              }
+              function listsFunction_more() {
+                var z = document.getElementById("lists_more");
+                var q = document.getElementById("content2_more");
+                if(q.style.display == "block") {q.style.display = "none";}
+                if (z.style.display === "none") {
+                  z.style.display = "block";
+                } 
+                else 
+                {
+                  z.style.display = "none";
+                }
+              }
+              function content2Function_more() {
+                var z = document.getElementById("lists_more");
+                var q = document.getElementById("content2_more");
+                if(z.style.display == "block") {z.style.display = "none";}
+                if (q.style.display === "none") {
+                  q.style.display = "block";
+                } 
+                else 
+                {
+                  q.style.display = "none";
+                }
+              }
+        </script>
+    </body>
+</html>
